@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="tg.ip.net_dk_digit_ejb_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="tg.ip.net_dk_digit_ejb_jar_1.0-SNAPSHOTPU2" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>tg.ip.net.dk.digit.ejb.entities.Bien</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Commentaires</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Image</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.ImageBien</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Object_publication</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.PropositionDemande</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.PropositionTroc</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Publication</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Trocs</class>
+    <class>tg.ip.net.dk.digit.ejb.entities.Utilisateur</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dk_database?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="user1"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
